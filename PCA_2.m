@@ -21,4 +21,7 @@ s2 = size(coeff, 1) * size(coeff, 2);
 s3 = size(mu, 1) * size(mu, 2);
 s_PCA = s1 + s2 + s3
 
+annotation('textbox', [0.15, 0.8, 0.1, 0.1], 'String', sprintf('s_{init} = %d', s_init), 'EdgeColor', 'none');
+annotation('textbox', [0.15, 0.7, 0.1, 0.1], 'String', sprintf('s_{PCA} = %d', s_PCA), 'EdgeColor', 'none');
 
+title('Dane początkowe i PCA');

@@ -2,13 +2,13 @@ clear all;
 close all;
 clc
 
-load seamount.mat
+load carbig.mat
 
-X = [x y];
+X = [Acceleration Cylinders];
 figure(1)
-plot(X, '*');grid;hold;plot(z, 'ok')
+plot(X, '*');grid;hold;plot(Horsepower, 'ok')
 
-tree = fitrtree(X, y);
+tree = fitrtree(X, Cylinders);
 
 view(tree, 'Mode','graph');
 
@@ -19,5 +19,4 @@ test_results = predict(tree, X_test);
 clc
 resuberror = resubLoss(tree)
 %cv = crossval(tree)
-
 

@@ -2,7 +2,7 @@ clear all
 close all
 clc
 
-load carsmall.mat
+load carbig.mat
 
 X=[Weight Horsepower];
 y=MPG;

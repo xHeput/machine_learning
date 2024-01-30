@@ -1,11 +1,11 @@
 clear all; close all; clc
-load ionosphere.mat
+load reaction.mat
 
-tree = fitctree(X,Y);
+tree = fitctree(reactants,rate);
 
 view(tree, 'Mode','graph');
 
-X_test = X;
+X_test = reactants;
 
 test_results = predict(tree, X_test);
 
